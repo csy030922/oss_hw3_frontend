@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+header .inner {
+    width: 1180px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header .inner h1 {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+}
+
+header .inner h1 a {
+    font: bold 24px/1 "arial";
+    color: #444;
+}
+
+header .inner .util {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+header .inner .util li {
+    float: left;
+}
+
+header .inner .util li a {
+    display: block;
+    font: 12px/1 "arial";
+    color: #999;
+    padding: 0 10px;
+}
+
+header .inner #gnb {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+header .inner #gnb li {
+    float: left;
+}
+
+header .inner #gnb li a {
+    display: block;
+    font: bold 15px/1 "arial";
+    color: #555;
+    padding: 20px 40px;
+    transition: all 1s;
+}
+
+header .inner #gnb li a:hover {
+    background: #555;
+    color: #fff;
+}
+
+figure {
+    width: 100%;
+    height: calc(100vh - 120px);
+    background: #000;
+    position: relative;
+    overflow: hidden;
+    padding-top: 250px;
+}
+
+figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+figure .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+
+figure .inner h1 {
+    font: normal 70px/1 "arial";
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+figure .inner p {
+    font: 16px/1.4 "arial";
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+figure .inner a {
+    display: block;
+    width: 400px;
+    height: 30px;
+    border: 1px solid #bbb;
+    font: bold 11px/30px "arial";
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+figure .inner a:hover {
+    background: #fff;
+    color: #555;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* 왼쪽 섹션 스타일 */
+.left-section {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+}
+
+.left-section .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.left-section .wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-section .wrap article {
+    margin-bottom: 20px;
+}
+
+.left-section .wrap article:last-child {
+    margin-bottom: 0;
+}
+
+.left-section .wrap article h2 {
+    font: bold 20px/1 "arial";
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.left-section .wrap article p {
+    font: 14px/1.4 "arial";
+    color: #777;
+}
+
+.left-section .wrap article .pic {
+    width: 100%;
+    height: 200px; /* 고정된 높이 설정 */
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #333;
+    position: relative;
+}
+
+.left-section .wrap article .pic img {
+    width: auto; 
+    height: 100%; 
+    display: block;
+    margin: 0 auto;
+    object-fit: cover; 
+}
+
+/* 오른쪽 섹션 스타일 */
+.right-section {
+    flex: 1;
+}
+
+.right-section .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.right-section .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.right-section .wrap article {
+    width: 200px;
+    margin: 0px 10px 20px;
+    box-sizing: border-box;
+}
+
+.right-section .wrap article .pic {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #333;
+    position: relative;
+}
+
+.right-section .wrap article .pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.right-section .wrap article h2 {
+    margin-bottom: 10px;
+    font: bold 16px/1 "arial";
+    color: #555;
+}
+
+.right-section .wrap article p {
+    font: 14px/1.4 "arial";
+    color: #777;
+}
+
+/* 방명록 스타일 */
+.right-section .wrap #guestbook {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.right-section .wrap #guestbook-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.right-section .wrap #guestbook-form input, 
+.right-section .wrap #guestbook-form textarea {
+    width: 100%;
+    padding: 10px;
+    font: 14px/1.4 "arial";
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.right-section .wrap #guestbook-form button {
+    padding: 10px;
+    font: bold 14px/1 "arial";
+    color: #fff;
+    background-color: #555;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.right-section .wrap #guestbook-form button:hover {
+    background-color: #333;
+}
+
+.right-section .wrap #entries {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right-section .wrap .entry {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+.right-section .wrap .entry .author {
+    font: bold 14px/1 "arial";
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.right-section .wrap .entry .message {
+    font: 14px/1.4 "arial";
+    color: #777;
+}
+
+/* 공통 섹션 스타일 */
+section .inner h1 {
+    font: bold 24px/1 "arial";
+    color: #555;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionn {
+    margin-bottom: 100px; 
+}
+
+footer {
+    width: 100%;
+    padding: 30px 0;
+    background: #333;
+    border-top: 1px solid #888;
+}
+
+footer .inner {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+footer .inner .upper {
+    width: 100%;
+    border-bottom: 1px solid #555;
+    padding-bottom: 20px;
+}
+
+footer .inner .upper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer .inner .upper h1 {
+    float: left;
+    font: bold 24px/1 "arial";
+    color: #999;
+}
+
+footer .inner .upper ul {
+    float: right;
+}
+
+footer .inner .upper ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+footer .inner .upper ul li a {
+    font: bold 14px/1 "arial";
+    color: #888;
+}
+
+footer .inner .lower {
+    width: 100%;
+    padding-top: 20px;
+}
+
+footer .inner .lower address {
+    width: 100%;
+    font: 12px/1 "arial";
+    color: #888;
+    margin-bottom: 20px;
+}
+
+footer .inner .lower p {
+    font: 12px/1 "arial";
+    color: #888;
+    margin-bottom: 20px;
+}
+
